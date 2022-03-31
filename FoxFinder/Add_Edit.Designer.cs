@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Edit));
             this.IMG_Add = new System.Windows.Forms.PictureBox();
-            this.URL = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Media_playable = new System.Windows.Forms.TextBox();
+            this.Media_description = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Box_Name = new System.Windows.Forms.TextBox();
-            this.category_Media = new System.Windows.Forms.ComboBox();
-            this.category = new System.Windows.Forms.ComboBox();
+            this.Media_title = new System.Windows.Forms.TextBox();
+            this.Media_type = new System.Windows.Forms.ComboBox();
+            this.Media_category = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.save2db = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IMG_Add)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,21 +55,21 @@
             this.IMG_Add.TabIndex = 0;
             this.IMG_Add.TabStop = false;
             // 
-            // URL
+            // Media_playable
             // 
-            this.URL.Location = new System.Drawing.Point(451, 12);
-            this.URL.Name = "URL";
-            this.URL.Size = new System.Drawing.Size(169, 23);
-            this.URL.TabIndex = 1;
-            this.URL.Text = "URL";
+            this.Media_playable.Location = new System.Drawing.Point(451, 12);
+            this.Media_playable.Name = "Media_playable";
+            this.Media_playable.Size = new System.Drawing.Size(169, 23);
+            this.Media_playable.TabIndex = 1;
+            this.Media_playable.Text = "URL";
             // 
-            // richTextBox1
+            // Media_description
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(168, 61);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(277, 101);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.Media_description.Location = new System.Drawing.Point(168, 61);
+            this.Media_description.Name = "Media_description";
+            this.Media_description.Size = new System.Drawing.Size(277, 101);
+            this.Media_description.TabIndex = 2;
+            this.Media_description.Text = "";
             // 
             // label1
             // 
@@ -80,29 +80,29 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Description";
             // 
-            // Box_Name
+            // Media_title
             // 
-            this.Box_Name.Location = new System.Drawing.Point(168, 12);
-            this.Box_Name.Name = "Box_Name";
-            this.Box_Name.Size = new System.Drawing.Size(277, 23);
-            this.Box_Name.TabIndex = 4;
-            this.Box_Name.Text = "Name";
+            this.Media_title.Location = new System.Drawing.Point(168, 12);
+            this.Media_title.Name = "Media_title";
+            this.Media_title.Size = new System.Drawing.Size(277, 23);
+            this.Media_title.TabIndex = 4;
+            this.Media_title.Text = "Name";
             // 
-            // category_Media
+            // Media_type
             // 
-            this.category_Media.FormattingEnabled = true;
-            this.category_Media.Location = new System.Drawing.Point(626, 12);
-            this.category_Media.Name = "category_Media";
-            this.category_Media.Size = new System.Drawing.Size(121, 23);
-            this.category_Media.TabIndex = 5;
+            this.Media_type.FormattingEnabled = true;
+            this.Media_type.Location = new System.Drawing.Point(626, 12);
+            this.Media_type.Name = "Media_type";
+            this.Media_type.Size = new System.Drawing.Size(121, 23);
+            this.Media_type.TabIndex = 5;
             // 
-            // category
+            // Media_category
             // 
-            this.category.FormattingEnabled = true;
-            this.category.Location = new System.Drawing.Point(626, 41);
-            this.category.Name = "category";
-            this.category.Size = new System.Drawing.Size(121, 23);
-            this.category.TabIndex = 6;
+            this.Media_category.FormattingEnabled = true;
+            this.Media_category.Location = new System.Drawing.Point(626, 41);
+            this.Media_category.Name = "Media_category";
+            this.Media_category.Size = new System.Drawing.Size(121, 23);
+            this.Media_category.TabIndex = 6;
             // 
             // button1
             // 
@@ -122,15 +122,6 @@
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(12, 408);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -141,21 +132,31 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // save2db
+            // 
+            this.save2db.Location = new System.Drawing.Point(12, 408);
+            this.save2db.Name = "save2db";
+            this.save2db.Size = new System.Drawing.Size(75, 23);
+            this.save2db.TabIndex = 11;
+            this.save2db.Text = "Save";
+            this.save2db.UseVisualStyleBackColor = true;
+            this.save2db.Click += new System.EventHandler(this.save2db_Click);
+            // 
             // Add_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 501);
+            this.Controls.Add(this.save2db);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.category);
-            this.Controls.Add(this.category_Media);
-            this.Controls.Add(this.Box_Name);
+            this.Controls.Add(this.Media_category);
+            this.Controls.Add(this.Media_type);
+            this.Controls.Add(this.Media_title);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.URL);
+            this.Controls.Add(this.Media_description);
+            this.Controls.Add(this.Media_playable);
             this.Controls.Add(this.IMG_Add);
             this.Name = "Add_Edit";
             this.Text = "Add_Edit";
@@ -169,15 +170,15 @@
         #endregion
 
         private PictureBox IMG_Add;
-        private TextBox URL;
-        private RichTextBox richTextBox1;
+        private TextBox Media_playable;
+        private RichTextBox Media_description;
         private Label label1;
-        private TextBox Box_Name;
-        private ComboBox category_Media;
-        private ComboBox category;
+        private TextBox Media_title;
+        private ComboBox Media_type;
+        private ComboBox Media_category;
         private Button button1;
         private Button button2;
-        private Button button3;
         private PictureBox pictureBox1;
+        private Button save2db;
     }
 }

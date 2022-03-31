@@ -1,3 +1,4 @@
+using MongoDB.Driver;
 namespace FoxFinder
 {
     public partial class Index : Form
