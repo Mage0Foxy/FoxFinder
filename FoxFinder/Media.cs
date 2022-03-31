@@ -1,3 +1,4 @@
+
 ﻿using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace FoxFinder
 {
-    internal class Media
+    public class Media
     {
-        public string Media_cover { get; set; }
+        public string Media_cover { get; set;}
         public string Media_title { get; set; }
         public string Media_description { get; set; }
         public string Media_playable { get; set; }
